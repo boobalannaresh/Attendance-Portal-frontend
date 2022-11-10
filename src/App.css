@@ -1,0 +1,292 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+      animation: App-logo-spin infinite 20s linear;
+    }
+  }
+  
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  @keyframes App-logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* ---------------- Login ------------------------------ */
+  
+  .allLogin{
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .bodyLogin{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #23242a;
+  }
+  
+  .box{
+    position: relative;
+    width: 380px;
+    height: 500px;
+    background: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+  }
+  
+  .box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg, transparent, #45f3ff, #45f3ff);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+  }
+  
+  @keyframes animate{
+    0%
+    {
+      transform: rotate(0deg);
+    }
+    100%
+    {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .form{
+     position: absolute;
+     inset:2px;
+     border-radius: 8px;
+     background: #28292d;
+     z-index: 10;
+     padding: 50px 40px;
+     display: flex;
+     flex-direction: column;
+  }
+  .form h2{
+    color: #45f3ff;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  
+  .inputBox{
+    position: relative;
+    width: 300px;
+    margin-top: 30px;
+  
+  }
+  
+  .inputBox input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #23242a;
+    font-size:  1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+  }
+  
+  .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+  }
+  
+  .inputBox input:valid ~ span,
+  .inputBox input:focus ~ span
+  {
+    color: #45f3ff;
+    transform: translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+  }
+  
+  .inputBox i{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+  
+  }
+  
+  .inputBox input:valid ~ i,
+  .inputBox input:focus ~ i
+  {
+    height: 44px;
+  }
+  
+  .links{
+  display: flex;
+  justify-content: space-between;
+  }
+  
+  .links a{
+    margin: 15px 0;
+    font-size: 0.9em;
+    color: #8f8f8f;
+    text-decoration: none;
+  }
+  
+  .links a:hover,
+  .links a:nth-child(2){
+    color: #45f3ff;
+  }
+  
+  button[type="submit"]{
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:active{
+    opacity: 0.8;
+  }
+  
+  .back{
+    margin-top: 10px;
+    margin-left: 50px;
+    color: #45f3ff;
+  }
+  
+  /* ---------------------End of  login, signup, forgot password ---------------------- */
+  
+  #comment {
+   
+    resize: none;
+    height: 300px;
+  }
+
+  /* ------------------------ Sidebar ---------------------------------------- */
+/* The side navigation menu */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links */
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link */
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over */
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  /* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+.Sidebar{
+    margin-top: 60px;
+   
+}
+
+.Navbar{
+    margin-left: 10%;
+}
+
+  /* ------------------------------------------------------------------------------------------------------------------------------------- */
+
