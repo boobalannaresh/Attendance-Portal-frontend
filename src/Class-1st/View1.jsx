@@ -41,7 +41,10 @@ function View1() {
       </div>
 
       <div className='row shadow-lg p-3 mb-5 bg-body rounded'>
-        <h4>{userData.name}</h4>
+      <h4>Roll_No: {userData.rollNo}</h4>
+        <h4>Name: {userData.name}</h4>
+        <h4>Date_Of_Birth: {userData.dateOfBirth}</h4>
+        <h4>Grade: {userData.grade}</h4>
       </div>
       <div className='row shadow-lg p-3 mb-5 bg-body rounded'>
         

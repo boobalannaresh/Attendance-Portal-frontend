@@ -1,10 +1,21 @@
 import React from 'react'
+import "./App.css";
 
 function Home() {
   return (
     <div className='container'>
-        <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/Black_Panther_%28film%29_poster.jpg" alt="" />
+      <div className='homesize'>
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" />
 
+        <div id='wrapper' className="wrapper">
+          <p className="main-text"><u>Welcome back to School</u></p>
+          <div className="bubble small"></div>
+          <div className="bubble s-medium"></div>
+          <div className="bubble medium"></div>
+          <div className="bubble large"></div>
+          <div className="bubble small-l"></div>
+        </div>
+      </div>
     </div>
   )
 }
